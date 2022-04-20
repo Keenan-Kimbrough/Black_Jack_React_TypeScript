@@ -1,13 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import Deck from './components/Deck'
-interface Player {
+interface IPlayer {
   hand: any,
   hasPlayerPassed: boolean,
   hasPlayerLoss: boolean,
-  playerName: string
+  playerName?: string
 
 }
+type player = {
+
+}
+type canadianPlayer = {
+
+}
+type northAmericanPlayers = player | canadianPlayer // union 
+/* how to add types to function 
+ const func: "(a:string , b:number, c: boolean) => boolean(value that comes back from return/ or void/ when nothint
+ )= (a,b,c) => {
+
+}
+props is a object, define ahead of time, interface are extendable like class compoents
+*/
 class Player {
   constructor () {
     this.hand = []
