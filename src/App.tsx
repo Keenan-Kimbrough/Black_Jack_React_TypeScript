@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import Deck from './components/Deck'
+
+// third party library types
+//angular brackets mean  you can pass a paraemeter type to type <>
+//angular brackets gnerics type <HTMLInputElement>
 interface IPlayer {
   hand: any,
   hasPlayerPassed: boolean,
@@ -27,13 +31,13 @@ class Player {
     this.hand = []
     this.hasPlayerPassed = false
     this.hasPlayerLoss = false
-    this.playerName = ''
+    this.playe/rName = ''
   }
 
   addCard (getCard: string) {
 
   }
-
+// generic input
  getScore () {
 
  }
