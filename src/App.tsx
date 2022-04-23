@@ -5,24 +5,11 @@ import Deck from './components/Deck'
 // third party library types
 //angular brackets mean  you can pass a paraemeter type to type <>
 //angular brackets gnerics type <HTMLInputElement>
-interface IPlayer {
-  hand: any,
-  hasPlayerPassed: boolean,
-  hasPlayerLoss: boolean,
-  playerName?: string
-
-}
-type changeHandlers = {
 
 
-}
-type player = {
 
-}
-type canadianPlayer = {
 
-}
-type northAmericanPlayers = player | canadianPlayer // union 
+//type northAmericanPlayers = player | canadianPlayer // union 
 /* how to add types to function 
  const func: "(a:string , b:number, c: boolean) => boolean(value that comes back from return/ or void/ when nothint
  )= (a,b,c) => {
@@ -30,24 +17,54 @@ type northAmericanPlayers = player | canadianPlayer // union
 }
 props is a object, define ahead of time, interface are extendable like class compoents
 */
-class Player {
-  constructor () {
-    this.hand = []
-    this.hasPlayerPassed = false
-    this.hasPlayerLoss = false
-    this.playe/rName = ''
+
+//private -- access inside of player/ default it is private
+//public when you can access outside player
+//protected access in subclasses
+class Player  {
+  public hand: Array<string>;
+  public hasPlayerPassed: boolean;
+  public hasPlayerLoss: boolean;
+  public playerName:string;
+  
+
+  public constructor () {
+   
+
+    this.hand = [];
+    this.hasPlayerPassed = false;
+    this.hasPlayerLoss = false;
+    this.playerName = '';
   }
 
-  addCard (getCard: string) {
+  public addCard (getCard:string): void {
+    
 
   }
 // generic input
- getScore () {
+ public getScore (): number {
+
 
  }
 
+
 }
-class App extends Component {
+ //interface for app state
+
+ interface AppState {
+
+  deck: Deck;
+  players: Player[];// same as typing out " Array<Player>"
+  playerTurn: number;
+  displayMessage?: string;
+  gameOver: boolean;
+
+ }
+
+ interface AppProps{
+   
+ }
+class App extends React.Component<AppProps,AppState> {
   
   //private is anything inside the class can access it , public means anything can access it
     baseState = {
@@ -57,9 +74,9 @@ class App extends Component {
     displayMessage: " Hey Let's play BlackJack Together :)",
     gameOver: false
     }
-  constructor () {
+  constructor (props: AppProps) {
 
-   super()
+   super(props)
 
  
 
