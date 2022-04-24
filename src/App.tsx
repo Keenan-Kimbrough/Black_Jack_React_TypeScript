@@ -42,7 +42,7 @@ class Player  {
 
   }
 // generic input
- public getScore (): number {
+ public getScore ():  {
 
 
  }
@@ -161,8 +161,8 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
 
     
     const updatedPlayers =[
-      ...players
-  ]
+      ...players]
+  
    
     const updatedDeck = {
       ...deck

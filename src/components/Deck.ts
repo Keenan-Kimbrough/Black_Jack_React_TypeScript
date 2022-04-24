@@ -4,6 +4,9 @@ import getData from './GetData'
 
 
 class Deck  {
+
+   
+  
     constructor () {
         
 
