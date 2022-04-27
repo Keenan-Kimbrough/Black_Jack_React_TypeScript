@@ -9,8 +9,9 @@ interface HandProps{
 
 interface AppProps{
 player: Array<string>
+
 }
-class HandView extends React.Component<AppProps,HandProps,CardProps> {
+class HandView extends React.Component<AppProps,HandProps,> {
     constructor(props: AppProps ) {
         super(props)
     }
