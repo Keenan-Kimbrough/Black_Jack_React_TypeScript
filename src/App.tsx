@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import Deck from './components/Deck'
-
+import HandView from './components/HandView'
 // third party library types
 //angular brackets mean  you can pass a paraemeter type to type <>
 //angular brackets gnerics type <HTMLInputElement>
@@ -42,10 +41,10 @@ class Player  {
 
   }
 // generic input
- public getScore ():  {
+ //public getScore ():  {
 
 
- }
+ //}
 
 
 }
@@ -282,7 +281,7 @@ this.beginsNextPlayersTurn()
           </div>
           <div className="row"> 
           <div className="col-sm"> </div>
-          <div className=" col-sm alert alert-primary" col> Message: {this.state.displayMessage} </div>
+          <div className=" col-sm alert alert-primary" > Message: {this.state.displayMessage} </div>
           
           <div className="col-sm"> </div>
           </div>

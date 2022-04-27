@@ -1,18 +1,30 @@
 import Card from './Card'
 import React from 'react'
 import './CardView.css'
-class CardView extends React.Component {
+interface CardProps {
+    type: string;
+    suit: string
+}
+interface CardViewProps{
+card: CardProps; 
+type: string;
+suit: any;
+}
 
-    constructor(props) {
+class CardView extends React.Component<CardViewProps,CardProps> {
 
-        super();
+    constructor(props:CardViewProps) {
+
+        super(props);
 
         
     }
 
     render () {
+        
+
         const {card} = this.props
-        const {type, suit} = card
+        const {type, suit}: CardProps = card
 //const className = type+' '+suit
 // make for loop to correspond with value 
 const className= ` ${type} ${suit}`

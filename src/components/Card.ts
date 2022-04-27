@@ -1,5 +1,12 @@
+
+
 class Card {
-    constructor(type, suit)
+    public type;
+    public suit;
+    public value;
+
+
+    public constructor(type: any, suit:any)
     {
     this.type = type
     this.suit = suit
