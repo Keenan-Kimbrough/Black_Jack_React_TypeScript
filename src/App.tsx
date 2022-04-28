@@ -83,13 +83,16 @@ checkIfGameOver = () => {
   const { players} = this.state
   //loop through all the players, if none have passed of loss game over
   // if I use in instead of "of" it would use the index instead of players
+ 
   for (const player of players){
       if (  player.hasPlayerPassed === false && player.hasPlayerLoss === false)
-      {
+      { console.log(player.hasPlayerPassed)
+        console.log(player.hasPlayerLoss)
           return false
-      }
+      } 
+      return true
   }
-  return true
+  
 
 
 }
@@ -133,11 +136,7 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
   playerHits() {
     //
   
-    if (this.checkIfGameOver()) {
-      this.setState ({
-        displayMessage:'You lost the Game :(. Press New game to try again!',
-        gameOver: true
-      })}
+    
 
     const {deck,players,playerTurn} = this.state
    
@@ -164,7 +163,7 @@ console.log(updatedPlayers[playerTurn].getScore(newCard1))
     updatedPlayers[playerTurn].hasPlayerLoss = false
   }
   
-
+  
     this.setState ({
       deck: updatedDeck,
       players: updatedPlayers
@@ -172,6 +171,12 @@ console.log(updatedPlayers[playerTurn].getScore(newCard1))
     
 
     })
+
+    if (this.checkIfGameOver()) {
+      this.setState ({
+        displayMessage:'You lost the Game :(. Press New game to try again!',
+        gameOver: true
+      })}
     this.beginsNextPlayersTurn()
   }
   
