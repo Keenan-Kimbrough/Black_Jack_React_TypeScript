@@ -1,18 +1,18 @@
 
 import './Card.css'
 class Card {
-    public type;
-    public suit;
-    public value;
+    public type:string;
+    public suit: string;
+    
 
 
-    public constructor(type: any, suit:any)
+    public constructor(type: any, suit:any, )
     {
     this.type = type
     this.suit = suit
-        this.value = this.getCardCount()
+    
     }
-  getCardCount =() => {
+    getCardCount =() => {
   if (this.type ==='J')
   {
   return 10 }

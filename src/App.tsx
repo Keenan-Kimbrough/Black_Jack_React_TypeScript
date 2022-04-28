@@ -2,6 +2,7 @@ import React from 'react';
 import Deck from './components/Deck'
 import HandView from './components/HandView'
 import Player from './components/Player'
+import './App.css'
 // third party library types
 //angular brackets mean  you can pass a paraemeter type to type <>
 //angular brackets gnerics type <HTMLInputElement>
@@ -53,7 +54,8 @@ class App extends React.Component<AppProps,AppState> {
     players: [new Player(), new Player()],
     playerTurn: 0,
     displayMessage: " Hey Let's play BlackJack Together :)",
-    gameOver: false
+    gameOver: false,
+    score: 0
     }
   constructor (props: AppProps) {
 
@@ -152,10 +154,14 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
     const newCard1 = updatedDeck.getCard()
 
     updatedPlayers[playerTurn].addCard(newCard1)
-  
-    if (updatedPlayers[playerTurn].getScore() > 21) {
+console.log(updatedPlayers[playerTurn].getScore(newCard1))
+
+    if (updatedPlayers[playerTurn].getScore(newCard1) > 21) {
       updatedPlayers[playerTurn].hasPlayerLoss = true
 
+  } else {
+    console.log(updatedPlayers[playerTurn].hasPlayerLoss)
+    updatedPlayers[playerTurn].hasPlayerLoss = false
   }
   
 
@@ -250,13 +256,19 @@ this.beginsNextPlayersTurn()
         
         
          <div className="row">    
-         <div className="col-sm"> Player One Hand <div className="card body"><HandView player={players[0]}/></div> </div>
-         <div className='col-sm'></div>
-        <div className="col-sm">  Player Two Hand <div className="card body"></div> <HandView player={players[1]}/> </div>
+         <div className="col-sm"> Player One Hand <div className="card body">
+           <HandView player={players[0]}/></div> 
+           </div>
+         
+         <div className='row'>
+         
+         </div>
+        <div className="col-sm">  Player Two Hand <div className='render'></div>
+         <HandView player={players[1]}/> </div>
         </div>
 
         <div className='row'>
-          
+        
           <button className=" col-sm btn btn-primary btn-lg active"  disabled={this.state.gameOver} onClick={this.playerHits} > Hit me </button>
           <button className=" col-sm btn btn-secondary btn-lg active" onClick={this.playersPasses}>Pass  </button>
           </div>

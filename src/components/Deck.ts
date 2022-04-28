@@ -12,13 +12,15 @@ class Deck  {
         
 
         this.deck = this.suits.flatMap((suit) =>
-        this.values.map((value) => new Card(value, suit))
+        this.values.map((value) => new Card( value,suit))
       );
+      
     }
-
- public getCard ():string  {
-  
+   
+ public getCard ():Card  {
+  console.log(this.deck.pop())
 return this.deck.pop()
+
  
  } 
   // method that doesn't have an instance *no this&=*( static)

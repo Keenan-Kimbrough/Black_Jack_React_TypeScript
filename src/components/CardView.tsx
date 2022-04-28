@@ -1,5 +1,7 @@
 import Card from './Card'
 import React from 'react'
+import Player from 'react'
+import './CardView.css'
 
 
 interface CardViewProps{
@@ -23,12 +25,12 @@ class CardView extends React.Component<CardViewProps> {
         const {type, suit} = card
 //const className = type+' '+suit
 // make for loop to correspond with value 
-const className= ` ${type} ${suit}`
+//const className= ` ${type} ${suit}`
         return (<div> 
  
  
- <div key={type} className={className}> {type} {suit} </div>
- <div> </div>
+ <div key={type} className={`${card.getCardCount()?'cards':''}`} > {type} {suit} </div>
+ 
 
  
 
