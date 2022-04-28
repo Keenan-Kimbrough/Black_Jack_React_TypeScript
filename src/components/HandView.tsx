@@ -10,12 +10,7 @@ interface HandViewProps{
 
 
 class HandView extends React.Component<HandViewProps> {
-    constructor(props: HandViewProps ) {
-        super(props)
-
-        
-    }
-
+    
 
     render () {
 

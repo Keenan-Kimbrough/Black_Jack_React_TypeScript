@@ -1,6 +1,6 @@
 import Card from './Card'
 import React from 'react'
-import Player from 'react'
+
 import './CardView.css'
 
 
@@ -11,13 +11,7 @@ card: Card;
 
 class CardView extends React.Component<CardViewProps> {
 
-    constructor(props:CardViewProps) {
-
-        super(props);
-
-        
-    }
-
+    
     render () {
         
 
