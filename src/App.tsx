@@ -229,43 +229,46 @@ this.beginsNextPlayersTurn()
     
     
 
-    return ( <div className="container">
+    return ( <div className="container ">
       
       <div className="row">
         <div className="col-sm">  </div>
         <div className="col-sm">Keenan's Blackjack Game </div>
         <div className="col-sm"> </div>
+        </div>
 
-
-      </div>
       <div className="row">
         <div className="col-sm"> </div>
          <div className="col-sm"> <button  className="btn btn-primary" onClick={this.newGame}> New Game </button> </div>
          <div className='col-sm'> </div>
-          </div>
+         </div>
          
 
        <div className="row"> 
        <div className='col-sm'></div>
-              
+       <div className='render'></div>
          <div className="col-sm"> Player Turn {playerTurn}</div>
          <div className='col-sm'></div>
          </div>
 
         
-        
-        
          <div className="row">    
-         <div className="col-sm"> Player One Hand <div className="card body">
-           <HandView player={players[0]}/></div> 
-           </div>
-         
-         <div className='row'>
-         
+         <div className="col-sm"> Player One Hand </div>
          </div>
-        <div className="col-sm">  Player Two Hand <div className='render'></div>
-         <HandView player={players[1]}/> </div>
-        </div>
+         
+           
+           <div className='row'>
+          <HandView player={players[0]}/>
+          </div>
+           
+         <div className='row'>
+        <div className="col-sm">  Player Two Hand </div>
+         </div>
+        
+        <div className='row'>
+          <div className='col-sm'> <HandView player={players[1]}/></div>
+          </div>
+          
 
         <div className='row'>
         
@@ -278,8 +281,9 @@ this.beginsNextPlayersTurn()
           
           <div className="col-sm"> </div>
           </div>
+          </div>
           
-          </div> )
+           )
           }
         
 }
