@@ -1,6 +1,7 @@
 import React from 'react';
 import Deck from './components/Deck'
 import HandView from './components/HandView'
+import Player from './components/Player'
 // third party library types
 //angular brackets mean  you can pass a paraemeter type to type <>
 //angular brackets gnerics type <HTMLInputElement>
@@ -20,26 +21,7 @@ props is a object, define ahead of time, interface are extendable like class com
 //private -- access inside of player/ default it is private
 //public when you can access outside player
 //protected access in subclasses
-class Player  {
-  public hand: Array<string>;
-  public hasPlayerPassed: boolean;
-  public hasPlayerLoss: boolean;
-  public playerName:string;
-  
 
-  public constructor () {
-   
-
-    this.hand = [];
-    this.hasPlayerPassed = false;
-    this.hasPlayerLoss = false;
-    this.playerName = '';
-  }
-
-  public addCard (getCard:string): void {
-    
-
-  }
 // generic input
  //public getScore ():  {
 
@@ -47,7 +29,7 @@ class Player  {
  //}
 
 
-}
+
  //interface for app state
 
  interface AppState {
@@ -162,10 +144,9 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
     const updatedPlayers =[
       ...players]
   
-   
-    const updatedDeck = {
-      ...deck
-    }
+   // review static methods
+
+    const updatedDeck =  Deck.clone(deck)
     //have to use arrow function in the deck class to get the getCard() method or it will not work! Very Important
 
     const newCard1 = updatedDeck.getCard()
@@ -178,7 +159,7 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
   }
   
 
-    this.setState({
+    this.setState ({
       deck: updatedDeck,
       players: updatedPlayers
     
@@ -196,9 +177,9 @@ console.log('this is the state of players turn', updatedPlayersTurn, playerTurn)
     const updatedPlayers = [
       ...players
     ]
-updatedPlayers[playerTurn].ifPlayerPassed = true
+updatedPlayers[playerTurn].hasPlayerPassed = true
 
-this.setState = ({
+this.setState ({
   players: updatedPlayers
 })
 //begins next turn

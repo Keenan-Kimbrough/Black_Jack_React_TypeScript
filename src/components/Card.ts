@@ -1,5 +1,5 @@
 
-
+import './Card.css'
 class Card {
     public type;
     public suit;

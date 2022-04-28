@@ -1,5 +1,4 @@
-import React from 'react'
-import { getEnvironmentData } from 'worker_threads';
+import './Deck.css'
 
 import Card from './Card'
 
@@ -17,11 +16,18 @@ class Deck  {
       );
     }
 
- getCard ():string  {
+ public getCard ():string  {
   
 return this.deck.pop()
  
  } 
+  // method that doesn't have an instance *no this&=*( static)
+ public static clone (deck:Deck): Deck {
+
+  const newDeck= new Deck()
+newDeck.deck = [...deck.deck] 
+return newDeck
+ }
 
         
     

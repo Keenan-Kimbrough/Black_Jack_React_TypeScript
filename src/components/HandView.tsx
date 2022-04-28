@@ -1,18 +1,16 @@
 import CardView from './CardView'
 import React from 'react'
-interface HandProps{
-    hand: Array<any>
-    CardView: 
+import Player from'./Player'
+interface HandViewProps{
+   player: Player
+   
 }
 
 
 
-interface AppProps{
-player: Array<string>
 
-}
-class HandView extends React.Component<AppProps,HandProps,> {
-    constructor(props: AppProps ) {
+class HandView extends React.Component<HandViewProps> {
+    constructor(props: HandViewProps ) {
         super(props)
     }
 

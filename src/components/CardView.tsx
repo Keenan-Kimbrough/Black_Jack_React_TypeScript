@@ -1,17 +1,13 @@
 import Card from './Card'
 import React from 'react'
-import './CardView.css'
-interface CardProps {
-    type: string;
-    suit: string
-}
+
+
 interface CardViewProps{
-card: CardProps; 
-type: string;
-suit: any;
+card: Card; 
+
 }
 
-class CardView extends React.Component<CardViewProps,CardProps> {
+class CardView extends React.Component<CardViewProps> {
 
     constructor(props:CardViewProps) {
 
@@ -24,7 +20,7 @@ class CardView extends React.Component<CardViewProps,CardProps> {
         
 
         const {card} = this.props
-        const {type, suit}: CardProps = card
+        const {type, suit} = card
 //const className = type+' '+suit
 // make for loop to correspond with value 
 const className= ` ${type} ${suit}`
