@@ -1,4 +1,71 @@
+@media screen and ( min-wdith: 640px) {
+  .container1 {
+    display: flex;
+  }
+}
+
 .render {
   display:flex;
   flex-grow:1
 }
+header {
+  text-align: center;
+  color: darkblue;
+  font-weight: Normal;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}
+p {
+  background: blue;
+  color: white;
+  min-height: 100px;
+  font-size:1.25rem;
+  width: 50%;
+  border: 2px solid Black;
+  padding: 10px;
+}
+
+h1 {
+  border: 2px solid black;
+  margin: 24px;
+  padding: 10px;
+  background-color: light blue;
+  margin-bottom: 40px
+}
+h3 {
+  margin: 24px;
+  padding: 10px;
+  
+}
+.player-1 {
+  border: 2px solid red;
+  height:400px;
+  width: 150px
+  
+  
+  
+ 
+
+}
+.player-2 {
+  border: 2px solid purple;
+  height: 400px;
+width: 150px
+
+
+}
+
+footer {
+  margin: auto;
+  border: 5px solid black;
+  margin-bottom: 10px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap:wrap
+}
+

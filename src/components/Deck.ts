@@ -14,7 +14,7 @@ class Deck  {
         this.deck = this.suits.flatMap((suit) =>
         this.values.map((value) => new Card( value,suit))
       );
-      
+      console.log(this.deck)
     }
    
  public getCard ():Card  {

@@ -234,46 +234,54 @@ this.beginsNextPlayersTurn()
     
     
 
-    return ( <div className="container ">
-      
+    return ( <div className="container1 ">
+<header>
+  
       <div className="row">
         <div className="col-sm">  </div>
         <div className="col-sm">Keenan's Blackjack Game </div>
         <div className="col-sm"> </div>
         </div>
-
+        </header>
+<h1>
       <div className="row">
         <div className="col-sm"> </div>
          <div className="col-sm"> <button  className="btn btn-primary" onClick={this.newGame}> New Game </button> </div>
          <div className='col-sm'> </div>
          </div>
-         
+
+         </h1>
+        <h2>
 
        <div className="row"> 
        <div className='col-sm'></div>
        <div className='render'></div>
-         <div className="col-sm"> Player Turn {playerTurn}</div>
+         <div className="col-sm" id="keenan"> Player Turn {playerTurn}</div>
          <div className='col-sm'></div>
          </div>
-
+         </h2>
+         <h3 className='container'>
         
-         <div className="row">    
+         <div className="row player-1">    
          <div className="col-sm"> Player One Hand </div>
-         </div>
+        
          
            
            <div className='row'>
           <HandView player={players[0]}/>
           </div>
+          </div>
            
-         <div className='row'>
+         <div className='row player-2'>
         <div className="col-sm">  Player Two Hand </div>
-         </div>
+         
         
-        <div className='row'>
+        <div className='row handview '>
           <div className='col-sm'> <HandView player={players[1]}/></div>
           </div>
+          </div>
           
+          </h3>
 
         <div className='row'>
         
@@ -286,8 +294,15 @@ this.beginsNextPlayersTurn()
           
           <div className="col-sm"> </div>
           </div>
+          <footer>
+           
+            Keenan <a href="https://github.com"> Keenan's Github</a>
+            
+            </footer>
+            
           </div>
-          
+
+         
            )
           }
         
