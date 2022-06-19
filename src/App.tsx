@@ -234,7 +234,7 @@ this.beginsNextPlayersTurn()
     
     
 
-    return ( <div className="container1 ">
+    return ( <div className="myDiv">
 <header>
   
       <div className="row">

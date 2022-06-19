@@ -1,8 +1,16 @@
-@media screen and ( min-wdith: 640px) {
+@media screen and ( min-wdith: 640px
+) {
   .container1 {
     display: flex;
   }
 }
+.myDiv {
+  
+  height: auto;
+  overflow-y: hidden
+}
+
+
 
 .render {
   display:flex;
